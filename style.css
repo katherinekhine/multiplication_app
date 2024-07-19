@@ -81,3 +81,30 @@ body {
     margin-top: 20px;
     font-size: 20px;
 }
+
+#difficulty {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: cursive;
+    color: #6e37a1;
+    background-color: white;
+    border: solid 2px #a768e1;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+    cursor: pointer;
+}
+
+#difficulty:focus {
+    border-color: #7a4cdb;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#difficulty option {
+    background-color: white;
+    color: #6e37a1;
+    font-family: cursive;
+}

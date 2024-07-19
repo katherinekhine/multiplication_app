@@ -8,7 +8,7 @@ const difficultyEl = document.getElementById("difficulty");
 
 let score = JSON.parse(localStorage.getItem("score")) || 0;
 let correctAns;
-let timeLeft = 30;
+let timeLeft = 60;
 
 scoreEl.innerText = `score: ${score}`;
 
