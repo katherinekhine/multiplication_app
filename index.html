@@ -10,11 +10,21 @@
 
 <body>
     <form action="" id="form" class="form">
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    
         <h4 id="score" class="score">score: 0</h4>
+        <h2 id="timer">Time Left: 30</h2>
         <h1 id="question">What is 1 multiply by 1?</h1>
+        <label for="input">Answer:</label>
         <input type="text" class="input" id="input" placeholder="Enter Your Answer" autofocus autocomplete="off">
         <button type="submit" class="btn">Submit</button>
+        <h4 id="feedback"></h4>
     </form>
+
 
     <script src="index.js"></script>
 </body>

@@ -16,6 +16,7 @@ body {
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
     border-radius: 10px;
+    animation: fadeIn 1s;
 }
 
 .input {
@@ -32,6 +33,11 @@ body {
 
 .input::placeholder {
     color: lightgray;
+}
+
+.input:focus {
+    border-color: #7a4cdb;
+    transition: border-color 0.3s;
 }
 
 .btn {
@@ -53,7 +59,52 @@ body {
     filter: brightness(.9);
 }
 
-.score {
-    text-align: right;
+.score, #timer {
+    font-size: 1.5em;
+    margin: 10px;
+    color: #fff;
+    background-color: #6e37a1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#feedback {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#difficulty {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: cursive;
     color: #6e37a1;
+    background-color: white;
+    border: solid 2px #a768e1;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+    cursor: pointer;
+}
+
+#difficulty:focus {
+    border-color: #7a4cdb;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#difficulty option {
+    background-color: white;
+    color: #6e37a1;
+    font-family: cursive;
 }
