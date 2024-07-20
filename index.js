@@ -9,6 +9,7 @@ const difficultyEl = document.getElementById("difficulty");
 let score = JSON.parse(localStorage.getItem("score")) || 0;
 let correctAns;
 let timeLeft = 60;
+let timerInterval;
 
 scoreEl.innerText = `score: ${score}`;
 
@@ -28,6 +29,7 @@ function setDifficulty() {
             maxNum2 = 20;
             break;
     }
+    resetTimer();
     generateQuestion(maxNum1, maxNum2);
 }
 
@@ -63,7 +65,7 @@ function updateLocalStorage() {
 difficultyEl.addEventListener('change', setDifficulty);
 
 function startTimer() {
-    const timerInterval = setInterval(() => {
+    timerInterval = setInterval(() => {
         timeLeft--;
         timerEl.innerText = `Time Left: ${timeLeft}`;
         if (timeLeft <= 0) {
@@ -74,6 +76,13 @@ function startTimer() {
             location.reload();
         }
     }, 1000);
+}
+
+function resetTimer() {
+    clearInterval(timerInterval);
+    timeLeft = 60;
+    timerEl.innerText = `Time Left: ${timeLeft}`;
+    startTimer();
 }
 
 startTimer();
